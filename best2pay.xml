@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0">
+	<name>Best2Pay</name>
+	<creationDate>28.11.2022</creationDate>
+	<author>Best2pay</author>
+	<authorEmail>helpline@best2pay.net</authorEmail>
+	<authorUrl>https://best2pay.net</authorUrl>
+	<copyright>(C) 2022 Open Source Matters. All rights reserved.</copyright>
+	<license>Open Source License, GNU GPL</license>
+	<version>1.0.0</version>
+	<description>Adds the ability to pay for goods through the payment systems MasterCard, Visa and Mir.</description>
+	<scriptfile>install/install.php</scriptfile>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install/install.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">install/uninstall.sql</file>
+		</sql>
+	</uninstall>
+	<administration>
+		<files folder="admin/">
+			<folder>install</folder>
+			<filename>adminparamsform.php</filename>
+			<filename>paymentform.php</filename>
+			<filename>pm_best2pay.php</filename>
+		</files>
+		<languages folder="lang">
+			<language tag="en-GB">en-GB.com_best2pay.ini</language>
+			<language tag="ru-RU">ru-RU.com_best2pay.ini</language>
+		</languages>
+	</administration>
+</extension>
